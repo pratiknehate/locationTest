@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.pratik.location.LocationwebApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 16.643 s <<< FAILURE! - in com.pratik.location.LocationwebApplicationTests
+deleteLocation(com.pratik.location.LocationwebApplicationTests)  Time elapsed: 0.49 s  <<< ERROR!
+java.util.NoSuchElementException: No value present
+	at com.pratik.location.LocationwebApplicationTests.deleteLocation(LocationwebApplicationTests.java:44)
+
