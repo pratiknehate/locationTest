@@ -13,9 +13,10 @@ import com.pratik.location.entities.Flight;
 
 public interface FlightRepository extends JpaRepository<Flight, Long> {
 
-	@Query(value="SELECT * from p_flight where departure_city=:departureCity and arrival_city=:arrivalCity and date_of_departure=:dateOfDeparture",nativeQuery = true)
+	@Query(value="SELECT * from p_flight where departurecity=:departureCity and arrivalcity=:arrivalCity and dateofdeparture=:dateOfDeparture",nativeQuery = true)
 	List<Flight> findByCity(@Param("departureCity") String from,@Param("arrivalCity") String to,@Param("dateOfDeparture") String departureDate);
 	
 	
 
 }
+
