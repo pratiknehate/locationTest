@@ -11,7 +11,12 @@ import com.pratik.location.repos.UserRepository;
 @Controller
 public class UserController {
 	@Autowired
-	UserRepository userRepository; 
+	UserRepository userRepository;
+	
+	@RequestMapping("/login1")
+	public String login() {	
+		return "login";
+	}
 	@RequestMapping("/register")
 	public String regPage() {	
 		return "registration";
@@ -22,10 +27,10 @@ public class UserController {
 		return "login";
 	}
 	@RequestMapping("/login")
-	public String login(@ModelAttribute("user") P_user user,@RequestParam("email")String email,@RequestParam("password")String password,ModelMap map) {
-		P_user user1 = userRepository.findByEmail(user.getEmail());
-		System.out.println(user.getEmail()+"  "+user.getPassword()+"    "+password+"    "+email);
-		if(user1.getPassword().equals(user.getPassword()))
+	public String login(@RequestParam("email")String email,@RequestParam("password")String password,ModelMap map) {
+		P_user user1 = userRepository.findByEmail(email);
+	//	System.out.println(user.getEmail()+"  "+user.getPassword()+"    "+password+"    "+email);
+		if(user1.getPassword().equals(password))
 		{
 			return "flights";
 		}
