@@ -7,13 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="login" method="post">
-<pre>
-Email:<input type="text" name="email">
-Password :<input type="password" name ="password">
-<input type="submit" value="login">
-</pre>
+
+<form action="flights" method="post">
+from:<input type="text" name="from">
+to:<input type="text" name="to">
+date<input type="text" name="departureDate">
+<input type="submit" value="search">
 </form>
-${msg}
 </body>
 </html>
