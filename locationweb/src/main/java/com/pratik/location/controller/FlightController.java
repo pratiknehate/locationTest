@@ -29,4 +29,6 @@ public class FlightController {
 		map.addAttribute("flights", list);
 		return "DisplayFlights";
 	}
+	
+
 }
