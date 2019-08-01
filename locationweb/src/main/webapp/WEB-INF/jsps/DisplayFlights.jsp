@@ -23,12 +23,13 @@ Locations:
 <c:forEach items="${flights}" var="flights">
 <tr>
 <td>${flights.id}</td>
-<td>${flights.flightNumber}</td>
-<td>${flights.operatingAirline}</td>
-<td>${flights.departureCity}</td>
-<td>${flights.arrivalCity}</td>
-<td>${flights.dateOfDeparture}</td>
-<td>${flights.estimateDepartureTime}</td>
+<td>${flights.flightnumber}</td>
+<td>${flights.operatingairline}</td>
+<td>${flights.departurecity}</td>
+<td>${flights.arrivalcity}</td>
+<td>${flights.dateofdeparture}</td>
+<td>${flights.time}</td>
+<td><a href="showCompleteReservation?flightId=${flights.id}">SELECT</a></td>
 </tr>
 </c:forEach>
 </table>
